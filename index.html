@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <title>Gallery</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <!--[if lt IE9]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
   <link rel="stylesheet" href="styles/gallery.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,116 +22,57 @@
     <ul class="small-photo-list">
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-123456_640.jpg" alt="John" class="small-photo">
+          <img src="images/meerkat-123456_640.jpg" alt="John" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">John</figcaption>
         </figure>
       </li>
 
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-255564_640.jpg" alt="Henry and Alice" class="small-photo">
-          <figcaption class="small-photo-caption">Henry and Alice</figcaption>
+          <img src="images/meerkat-255564_640.jpg" alt="Joe and Alice" class="small-photo" data-img-type="small">
+          <figcaption class="small-photo-caption">Joe and Alice</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-2800395_640.jpg" alt="Alice" class="small-photo">
+          <img src="images/meerkat-2800395_640.jpg" alt="Alice" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Alice</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-2871127_640.jpg" alt="Micheael" class="small-photo">
+          <img src="images/meerkat-2871127_640.jpg" alt="Micheael" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Micheael</figcaption>
         </figure>
       </li>
 
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-2873133_640.jpg" alt="Robert" class="small-photo">
+          <img src="images/meerkat-2873133_640.jpg" alt="Robert" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Robert</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-3000286_640.jpg" alt="Archibald" class="small-photo">
+          <img src="images/meerkat-3000286_640.jpg" alt="Archibald" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Archibald</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-2895580_640.jpg" alt="Ruppert" class="small-photo">
+          <img src="images/meerkat-2895580_640.jpg" alt="Ruppert" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Ruppert</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-3039060_640.jpg" alt="Walter" class="small-photo">
+          <img src="images/meerkat-3039060_640.jpg" alt="Walter" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Walter</figcaption>
         </figure>
       </li>
       <li class="list-item">
         <figure>
-          <img src="images/meerkat-506780_640.jpeg" alt="Steven" class="small-photo">
-          <figcaption class="small-photo-caption">Steven</figcaption>
-        </figure>
-      </li>
-
-      <!-- -->
-
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-123456_640.jpg" alt="John" class="small-photo">
-          <figcaption class="small-photo-caption">John</figcaption>
-        </figure>
-      </li>
-
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-255564_640.jpg" alt="Henry and Alice" class="small-photo">
-          <figcaption class="small-photo-caption">Henry and Alice</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-2800395_640.jpg" alt="Alice" class="small-photo">
-          <figcaption class="small-photo-caption">Alice</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-2871127_640.jpg" alt="Micheael" class="small-photo">
-          <figcaption class="small-photo-caption">Micheael</figcaption>
-        </figure>
-      </li>
-
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-2873133_640.jpg" alt="Robert" class="small-photo">
-          <figcaption class="small-photo-caption">Robert</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-3000286_640.jpg" alt="Archibald" class="small-photo">
-          <figcaption class="small-photo-caption">Archibald</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-2895580_640.jpg" alt="Ruppert" class="small-photo">
-          <figcaption class="small-photo-caption">Ruppert</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-3039060_640.jpg" alt="Walter" class="small-photo">
-          <figcaption class="small-photo-caption">Walter</figcaption>
-        </figure>
-      </li>
-      <li class="list-item">
-        <figure>
-          <img src="images/meerkat-506780_640.jpeg" alt="Steven" class="small-photo">
+          <img src="images/meerkat-506780_640.jpeg" alt="Steven" class="small-photo" data-img-type="small">
           <figcaption class="small-photo-caption">Steven</figcaption>
         </figure>
       </li>
@@ -136,8 +80,8 @@
 
 
     <figure class="big-photo-container">
-      <div class="big-photo-frame">
-        <img src="images/meerkat-123456_640.jpg" alt="John" class="big-photo">
+      <div class="big-photo-frame" data-img-type="frame">
+        <img src="images/meerkat-123456_640.jpg" alt="John" class="big-photo" data-img-type="big">
         <figcaption class="big-photo-caption">John</figcaption>
       </div>
     </figure>

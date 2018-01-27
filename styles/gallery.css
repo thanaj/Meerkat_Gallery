@@ -11,14 +11,14 @@ html, body {
 
 body {
   font-size: 10px;
-  background: rgb(149, 194, 215);
+  background: #f4cc70;
+  /*rgb(149, 194, 215); #c2b280 */
   display: flex;
   flex-direction: column;
 }
 
 .small-photo-caption {
-  background: rgb( 96, 125, 139);
-  color: rgb(202, 238, 255);
+  color: black;
   margin: 0;
   padding: 4px 10px;
   /*already a block element*/
@@ -26,12 +26,14 @@ body {
 }
 
 .small-photo-list {
+  margin-top: 32px;
   flex: 0 1 auto;
   order: 2;
   display: flex;
   justify-content: space-between;
+  align-items:flex-end;
   list-style: none;
-  padding: 0;
+  padding: 20px 0;
   white-space: nowrap;
   overflow-x: auto;
 }
@@ -52,6 +54,7 @@ body {
 }
 
 .text-logo {
+  color: #de7a22;
   background: white;
   text-align: center;
   font-size: 37px;
@@ -59,46 +62,42 @@ body {
 }
 
 .list-item {
-  /*display: block; czy potrzebne ???*/
   display: inline-block;
   min-width: 120px;
   max-width: 120px;
-  /*
-  border: 1px solid rgb(100%, 100%, 100%);
-  border: 1px solid rgba(100%, 100%, 100%, 0.8);
-  */
+  transition: transform 150ms ease-in-out;
 }
 
+.list-item:hover {
+  transform: scale(1.2);
+}
+.list-item + .list-item {
+  margin-left: 10px;
+}
 img {
-  border-top: 1px solid rgba(100%, 100%, 100%, 0.8);
-  border-left: 1px solid rgba(100%, 100%, 100%, 0.8);
-  border-right: 1px solid rgba(100%, 100%, 100%, 0.8);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
   padding: 0;
   margin: 0;
-}
-
-figcaption {
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid rgba(100%, 100%, 100%, 0.8);
-  border-left: 1px solid rgba(100%, 100%, 100%, 0.8);
-  border-right: 1px solid rgba(100%, 100%, 100%, 0.8);
+  width: inherit;
+  display: block;
 }
 
 .big-photo {
-  /*
-  max-height: 320px;
-  */
-  width: 905;
+  width: 90%;
 }
 
 .big-photo-frame {
   text-align: center;
   position: relative;
+  transition: transform 555ms cubic-bezier(1, 0.06, 0.28, 1);
+}
+
+.very-small-photo {
+  transform: scale(0.001);
+  transition: transform 0ms;
 }
 
 .big-photo-container {
-  background: red;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -106,8 +105,8 @@ figcaption {
 }
 
 .big-photo-caption {
-  position:absolute;
-  bottom: -16px;
+  position: absolute;
+  bottom: -40px;
   left: 4px;
   color: white;
   text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 9px;
@@ -118,13 +117,45 @@ figure {
   display: inline;
 }
 
-@media all and (min-width: 768px){
-  .main-content{
+
+/*don't display big photo*/
+
+.big-photo-hidden .big-photo-container {
+  display: none;
+}
+
+
+/*how to display small photos when gig is hidden*/
+
+.big-photo-hidden ul.small-photo-list {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-photo-hidden ul {
+  width: 100%;
+}
+
+.big-photo-hidden .list-item {
+  max-width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .main-content {
     flex-direction: row;
     overflow: hidden;
   }
   .small-photo-list {
     flex-direction: column;
-    order:0;
+    order: 0;
+    margin-left: 20px;
+    padding: 0 35px;
+  }
+  .list-item {
+    max-width: 320px;
+  }
+  .list-item+.list-item {
+    margin-top: 20px;
   }
 }
